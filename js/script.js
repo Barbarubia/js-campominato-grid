@@ -19,16 +19,16 @@ function generateGrid() {
     areaGrid.classList.remove('grid-7');
 
     // Genero un ciclo for che mi genera tante caselle in base alla difficoltà selezionata
-    for (let box = 1; box <= functionDifficulty(); box++) {
+    for (let numBox = 1; numBox <= functionDifficulty(); numBox++) {
         // Creo un nuovo div
-        let div = document.createElement('div');
-        // Attribuisco all'elemento div la classe box definita nel css
-        div.classList.add('box');
-        // Scrivo il numero della casella all'interno del div
-        div.innerHTML = box;
+        let box = document.createElement('button');
+        // Attribuisco all'elemento box la classe box definita nel css
+        box.classList.add('box');
+        // Scrivo il numero della casella all'interno del box
+        box.innerHTML = numBox;
         
         // Appendo i div creati all'interno dell'HTML
-        areaGrid.append(div);
+        areaGrid.append(box);
 
         // Quanti div su ogni riga (voglio che la griglia sia un quadrato)
         if (functionDifficulty() == 100) {
