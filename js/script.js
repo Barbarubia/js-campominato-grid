@@ -12,7 +12,11 @@ buttonPlay.addEventListener('click', generateGrid);
 // Scrivo la funzione che mi genera una griglia di N elementi, dove N dipende dalla difficoltà selezionata
 function generateGrid() {
     // Se clicco 2 volte consecutive non voglio che mi generi 2 griglie, quindi ad ogni click prima ripulisco l'area
-    // COME???
+    areaGrid.innerHTML = '';
+    // Devo rimuovere anche le classe aggiuntive che stabiliscono il numero di elementi per riga
+    areaGrid.classList.remove('grid-10');
+    areaGrid.classList.remove('grid-9');
+    areaGrid.classList.remove('grid-7');
 
     // Genero un ciclo for che mi genera tante caselle in base alla difficoltà selezionata
     for (let box = 1; box <= functionDifficulty(); box++) {
@@ -34,7 +38,9 @@ function generateGrid() {
         } else if (functionDifficulty() == 49) {
             areaGrid.classList.add('grid-7');
         }
+    
     }
+
 }
 
 
