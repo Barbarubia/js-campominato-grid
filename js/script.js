@@ -25,6 +25,15 @@ function generateGrid() {
         
         // Appendo i div creati all'interno dell'HTML
         areaGrid.append(div);
+
+        // Quanti div su ogni riga (voglio che la griglia sia un quadrato)
+        if (functionDifficulty() == 100) {
+            areaGrid.classList.add('grid-10');
+        } else if (functionDifficulty() == 81) {
+            areaGrid.classList.add('grid-9');
+        } else if (functionDifficulty() == 49) {
+            areaGrid.classList.add('grid-7');
+        }
     }
 }
 

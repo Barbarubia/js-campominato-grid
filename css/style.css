@@ -10,7 +10,11 @@ html {
 }
 
 body {
+    height: 100vh;
     background-color: #7fffd4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -55,18 +59,36 @@ header {
 
 /* MAIN */
 #grid {
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 
+.grid-10 {
+    width: 500px;
+}
+
+.grid-9 {
+    width: 450px;
+}
+
+.grid-7 {
+    width: 350px;
+}
+
 #grid .box {
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#grid .box:hover {
+    background-color: #6495ed;
+    color: white;
 }
 
 
@@ -76,7 +98,4 @@ footer {
     width: 100%;
     padding: 1rem 5rem;
     background-color: white;
-    font-size: .8rem;
-    position: absolute;
-    bottom: 0;
 }
