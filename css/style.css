@@ -13,6 +13,8 @@ body {
     background-color: #7fffd4;
 }
 
+
+
 /* HEADER */
 header {
     background-color: white;
@@ -48,6 +50,26 @@ header {
         width: 100px;
         cursor: ponter;
     }
+
+
+
+/* MAIN */
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid .box {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* FOOTER */
 footer {
