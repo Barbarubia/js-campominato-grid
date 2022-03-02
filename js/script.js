@@ -41,6 +41,19 @@ function generateGrid() {
     
     }
 
+// GENERATORE DI 5 NUMERI CASUALI: """""QUESTA PARTE ANCORA NON SERVE"""""
+    // Creo un array, inizialmente vuoto per i numeri random da non cliccare
+    const arrBombs = []
+
+    // Riempio l'array con 5 numeri senza ripetizioni
+    while (arrBombs.length < 5) {
+        let randomBox = Math.floor(Math.random() * functionDifficulty() + 1);
+        if (!arrBombs.includes(randomBox)) {
+            arrBombs.push(randomBox);
+        }
+    }
+    console.log(arrBombs);
+
 }
 
 
