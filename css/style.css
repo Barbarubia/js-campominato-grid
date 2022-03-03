@@ -59,33 +59,36 @@ header {
 
 /* MAIN */
 #grid {
+    width: 500px;
+    height: 500px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 
-.grid-10 {
-    width: 500px;
-}
-
-.grid-9 {
-    width: 450px;
-}
-
-.grid-7 {
-    width: 350px;
-}
-
 #grid .box {
     background-color: #7fffd4;
-    width: 48px;
-    height: 48px;
     flex-shrink: 0;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.box-10 {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.box-9 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.box-7 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 #grid .box:hover {
