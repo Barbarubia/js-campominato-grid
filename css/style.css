@@ -98,6 +98,11 @@ header {
     color: white;
 }
 
+#grid .box-clicked {
+    background-color: #6495ed;
+    color: white;
+}
+
 
 
 /* FOOTER */

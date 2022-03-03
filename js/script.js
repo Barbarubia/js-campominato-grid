@@ -14,6 +14,9 @@ function generateGrid() {
     // Se clicco 2 volte consecutive non voglio che mi generi 2 griglie, quindi ad ogni click prima ripulisco l'area
     areaGrid.innerHTML = '';
 
+    // Creo un array vuoto che conterrà il valore di tutte le caselle
+    let arrBoxes = [];
+
     // Genero un ciclo for che mi genera tante caselle in base alla difficoltà selezionata
     for (let numBox = 1; numBox <= functionDifficulty(); numBox++) {
         // Creo un nuovo div
@@ -22,7 +25,10 @@ function generateGrid() {
         box.classList.add('box');
         // Scrivo il numero della casella all'interno del box
         box.innerHTML = numBox;
-        
+
+        // TODO CLICK SU CASELLA
+        box.addEventListener('click', changeColorBox);
+
         // Appendo i div creati all'interno dell'HTML
         areaGrid.append(box);
 
@@ -44,8 +50,12 @@ function generateGrid() {
         // Grandezza dei box implementando lo style direttamente in JS
         box.style.width = `calc(100% / ${boxesPerRow})`;
         box.style.height = `calc(100% / ${boxesPerRow})`;
+
+        arrBoxes.push(parseInt(numBox));
+        
     
     }
+    console.log(arrBoxes);
 
 // GENERATORE DI 5 NUMERI CASUALI: """""QUESTA PARTE ANCORA NON SERVE"""""
     // Creo un array, inizialmente vuoto per i numeri random da non cliccare
@@ -82,4 +92,9 @@ function functionDifficulty() {
     } else {
         return 49;
     }
+}
+
+
+function changeColorBox() {
+    this.classList.add('box-clicked');
 }
