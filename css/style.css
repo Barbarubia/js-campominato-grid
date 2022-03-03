@@ -76,6 +76,7 @@ header {
     cursor: pointer;
 }
 
+/* Classi non più necessarie: calcolato in JS
 .box-10 {
     width: calc(100% / 10);
     height: calc(100% / 10);
@@ -90,6 +91,7 @@ header {
     width: calc(100% / 7);
     height: calc(100% / 7);
 }
+ */
 
 #grid .box:hover {
     background-color: #6495ed;

@@ -26,7 +26,9 @@ function generateGrid() {
         // Appendo i div creati all'interno dell'HTML
         areaGrid.append(box);
 
-        // Quanti div su ogni riga (voglio che la griglia sia un quadrato)
+        /*
+        Sezione di codice non più necessaria
+        // Quanti box su ogni riga (voglio che la griglia sia un quadrato)
         if (functionDifficulty() == 100) {
             box.classList.add('box-10');
         } else if (functionDifficulty() == 81) {
@@ -34,6 +36,14 @@ function generateGrid() {
         } else if (functionDifficulty() == 49) {
             box.classList.add('box-7');
         }
+        */
+
+        // Calcolo del N. box per riga e grandezza dei box effettuato direttamente in JS senza bisogno di aggiungere ulteriori classi
+        // N. box per riga
+        let boxesPerRow = Math.sqrt(functionDifficulty());
+        // Grandezza dei box implementando lo style direttamente in JS
+        box.style.width = `calc(100% / ${boxesPerRow})`;
+        box.style.height = `calc(100% / ${boxesPerRow})`;
     
     }
 
